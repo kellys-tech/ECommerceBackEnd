@@ -2,12 +2,12 @@
 
 # EmployeeTracker
 
-### GitHub Repo: 
-### Video: 
+### GitHub Repo: https://github.com/kellys-tech/ECommerceBackEnd
+### Video: https://youtu.be/ALrR7BDN12o
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-*This is a backend E-Commerce app that is used to track categories.*
+*This is a backend E-Commerce app that is used to track information on categories, product and tags.*
 
 ## Employee Tracker created using:
 * JavaScript
