@@ -7,70 +7,46 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-*This is a backend E-Commerce app that is used to track information on categories, product and tags.*
+*This is an E-Commerce back end express application. The app is designed to interact with a MySQL database through sequelize.*
 
 ## Employee Tracker created using:
-* JavaScript
-* MySql
+* Sequelize
+* MySql2
+* Express
+* DotEnv
 
 ## Features
-### View in Terminal
-* User can view a table of departments with colums
-    * id (auto generated)
-    * department name
-* User can view a table of roles with columns
-    * id (auto generated)
-    * title
-    * salary
-    * department_id (from joined departments table)
-    * department_name (from joined departments table)
-* User van view a table of employees with columns
-    * id (auto generated)
-    * first_name
-    * last_name
-    * title
-    * department_name (joined from departments table)
-    * salary
-    * manager_first_name (joined from role table based on employee's manager id)
-    * manager_last_name (joined from tole table based on employee's manager id)
-
-### Add through Terminal
-* User can add a department to the departments table by entering the following information. A unique id is auto generated.
-    * department name
-* User can enter a role into the role table by entering the following information. A unique id is auto generated.
-    * title
-    * salary
-    * department_id (as it relates to the departments table)
-* User can enter an employee into the employee table by entering the following information. A unique id is auto generated.
-    * first_name
-    * last_name
-    * role_id (based off the role table)
-    * manager_id (if applicable, based off the role table)
-
-## Update through Terminal
-* User can update an employee's role through the terminal by entering the following information
-    * the id of the user to be updated (based off the employee table)
-    * the new role id for the employee (based off the role table)
-
-## Future updates
-* Future updates to include the following:
-    * Updating employee's managers
-    * Viewing employees by manager
-    * Deleting departments, roles and employees
-    * Viewing the total budget for a department
-
-## Dependencies
-    * npm package console.table
-    * npm package dotenv,
-    * npm package inquirer,
-    * npm package mysql
-    * mysql workbench
-
-## How to use
-* The user will clone repository.
-* The user will need to create a .env file and enter their mysql workbench port, username and password
-* The user will need to create the database in mysql workbench
-* The user will need to do an `npm i` to install dependencies that are listed in tihe package.json file
+### Create a database and seed data
+* User can create a database in my MySqlWorkbench using the code in the schema file
+* User will run `npm start` from the terminal to connect to the database and create the tables
+* User will seed the database using the command `npm run seed` send data to the database
+### Create/Post new data using an API client (like Postman)
+* User can create new Categories
+* User can create new Products
+* User can create new Tags
+### Read/Get the table data using an API client (like Postman)
+* User can read all the data in the Category table
+* User can read one category's data in the Cateogry table
+* User can read all the data in the Product table
+* User can read one product's data in the Product table
+* User can read all the data in the Tag table
+* User can read one tag's data in the tag table
+### Update the table data using an API client (like Postman)
+* User can update a category in the Category table
+* User can update a product in the Product table
+* User can update a tag in the tag table
+### Delete data from a table using an API client (like Postman)
+* User can delete a category from the Category table
+* User can delete a product from the Prouct table
+* User can delete a tag from the tag table
+    
+# How to use
+* Fork the repo using the link above
+* Run command `npm i` to install dependencies from the package.json file
+* There is example environment information in the .env-Example file. The user will need ot create their own .env file using their MySQLWorkbench user name and password. 
+* Run command 'npm start' to connect to the database and create the tables
+* Install an API client like Postman to run the GET, PUT, POST and DELETE routes.
+* Use the video linked above for a demonstration
 
 ## License
 This project is licensed under the terms of the MIT license.
@@ -80,12 +56,3 @@ If you would like to contribute please contact me directly by submitting an issu
 
 ## Contact
 If you have any questions you can contact me through my github repo, listed at the top of the page or by emailing me at kellysmith.r77@gmail.com
-
-## Screenshots
-![ViewDepartments](/assets/ViewDepartments.png)
-![ViewRole](/assets/ViewRole.png)
-![ViewEmployee](/assets/ViewEmployee.png)
-![AddDepartment](/assets/NewDepartment.png)
-![AddRole](/assets/NewRole.png)
-![AddEmployee](/assets/NewEmployee.png)
-![UpdateEmployeeRole](/assets/UupdateEmployeeRole.png)
